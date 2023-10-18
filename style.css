@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root { /**root should be ':root' and not '.root'**/
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --hover: #766cf1;
+}
+
+.html {
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body { /**do not do this: '.body' !!**/
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--pale-blue);
+    background-image: url('images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    font-size: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /**vertical alignment**/
+    justify-content: center;
+    min-height: calc(100vh - 5px);
+    margin: 0;
+    overflow: hidden;
+}
+
+.container__card {
+    background: #fff;
+    max-width: 24rem;
+    height: 36rem; 
+    border-radius: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container__img__hero {
+    width: 100%;
+    border-radius: 19px 19px 0 0; /**top-left top-right bot-left bot-right**/
+}
+
+.container__text {
+    text-align: center;
+}
+
+.container__text h1 {
+    margin: 1.5rem 0 1rem 0;
+    color: var(--dark-blue);
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+
+.container__text p {
+    margin: 0 2rem;
+    color: var(--desaturated-blue);
+    overflow-wrap: break-word;
+}
+
+.container__pricing {
+    background-color: var(--very-pale-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1.3rem 0 0.15rem 0;
+    padding: 1rem;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.container__price__info {
+    margin: 0 3.5rem 0 0.5rem;
+}
+
+#annual__plan {
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+#price {
+    color: var(--desaturated-blue);
+}
+
+.change {
+    font-weight: 700;
+    color: var(--bright-blue);
+    text-decoration: underline;
+}
+
+#container__icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.container__price__info p {
+    margin: 0;
+    padding: 0 0 0 0.7rem;
+}
+
+.container__btns {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 1rem 0;
+}
+
+.proceed__btn {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 0.85rem 4.5rem;
+    margin: 0 0 1rem 0;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background-color: var(--bright-blue);
+    box-shadow: 0 10px 30px -5px var(--hover);
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.cancel__btn {
+    font-family: 'Red Hat Display', sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: var(--desaturated-blue);
+    padding: 0.85rem 4.8rem;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background-color: transparent;
+    font-size: 0.95rem;
+}
+
+.proceed__btn:hover{
+    background-color: var(--hover);
+}
+
+.cancel__btn:hover {
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.change:hover {
+    text-decoration: none;
+    color: var(--hover);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--desaturated-blue);
+}
+
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
